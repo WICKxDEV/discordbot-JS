@@ -6,7 +6,7 @@ const client = new Client({
 });
 
 const TOKEN =
-  "MTIxNTI4NjY1NDQ4NzQ5NDcwNw.G9N5ua.WAnSACQOfygpZpbxp5wOMlY-frM5wVH1c_QMI4";
+  "MTIxOTY0NTQ3MjA1OTQyNDgxOA.GlYJh9.zC-MXwYZv487LNA-KFoE0NfjMf-QYQGx06xoOM";
 const GITHUB_TOKEN = "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";
 const GITHUB_USERNAME = "WICKxDEV";
 const CHANNEL_ID = "1161691734762328166"; // Replace with your Discord channel ID
@@ -20,7 +20,7 @@ client.once("ready", () => {
   client.user.setPresence({
     activities: [
       {
-        name: "Connection with GitHub",
+        name: "Connected with GitHub",
         type: "WATCHING", // Can be 'PLAYING', 'LISTENING', 'WATCHING', 'COMPETING'
       },
     ],
@@ -152,5 +152,31 @@ async function formatActivityEmbed(event) {
 
   return embed;
 }
+
+// Interaction handling for slash commands
+client.on("interactionCreate", async (interaction) => {
+  if (!interaction.isCommand()) return;
+
+  const { commandName } = interaction;
+
+  if (commandName === "ping") {
+    const pingEmbed = new MessageEmbed()
+      .setColor("#1c6feb")
+      .setTitle("Pong! 🏓")
+      .setDescription("Calculating ping...")
+      .setImage(BANNER_IMAGE_URL)
+      .setTimestamp();
+
+    const sentMessage = await interaction.reply({
+      embeds: [pingEmbed],
+      fetchReply: true,
+    });
+    const ping = sentMessage.createdTimestamp - interaction.createdTimestamp;
+
+    pingEmbed.setDescription(`WebSocket Latency: ${ping}ms`);
+
+    await sentMessage.edit({ embeds: [pingEmbed] });
+  }
+});
 
 client.login(TOKEN);

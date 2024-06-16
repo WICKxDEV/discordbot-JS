@@ -29,8 +29,8 @@ This project is a Discord bot that monitors GitHub activity and posts updates to
 
 3. **Configure environment variables:**
 
-    Rename `.env.example` to `.env` and fill in your credentials:
-    ```env
+    fill in your credentials:
+    ```
     DISCORD_TOKEN=your_discord_bot_token
     GITHUB_TOKEN=your_github_personal_access_token
     GITHUB_USERNAME=your_github_username

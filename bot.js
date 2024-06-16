@@ -6,10 +6,10 @@ const client = new Client({
 });
 
 const TOKEN =
-  "MTIxOTY0NTQ3MjA1OTQyNDgxOA.GlYJh9.zC-MXwYZv487LNA-KFoE0NfjMf-QYQGx06xoOM";
-const GITHUB_TOKEN = "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";
-const GITHUB_USERNAME = "WICKxDEV";
-const CHANNEL_ID = "1161691734762328166"; // Replace with your Discord channel ID
+  "your_discord_bot_token";
+const GITHUB_TOKEN = "your_github_personal_access_token";
+const GITHUB_USERNAME = "your-username";
+const CHANNEL_ID = "your_discord_channel_id"; // Replace with your Discord channel ID
 const BANNER_IMAGE_URL =
   "https://cdn.discordapp.com/attachments/1026764838464139335/1251558736820961391/standard_2.gif?ex=666f0467&is=666db2e7&hm=b9ab2dbcfe7f2204cc94b26a1e2ce7ce7594557ba4612c15f416e8f086f482c8&";
 

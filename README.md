@@ -4,7 +4,8 @@ This project is a Discord bot that monitors GitHub activity and posts updates to
 
 ## Showcase
 
-img src="https://github.com/WICKxDEV/WICKxDEV/blob/main/standard%20(7).gif raw=true" alt="Avatar2" />
+![Uploading #⛓-github-activity _ DEV-HUB - Discord 6_18_2024 10_09_55 PM.png…]()
+
 
 ## Features
 
